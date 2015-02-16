@@ -1,4 +1,4 @@
-package com.saks.util;
+package com.sample.util;
 
 import java.util.List;
 
@@ -8,12 +8,15 @@ public class UserUtils {
 
 		output.append("{");
 
-		for(String username:list){
-			output.append("{ username: \"" + username + "\"},");
+		if(list!= null){
+			for(String username:list){
+				output.append("{ username: \"" + username + "\"},");
+			}
+			if(output.length()>2){
+				output.deleteCharAt(output.length()-1);
+			}
 		}
-		if(output.length()>2){
-			output.deleteCharAt(output.length()-1);
-		}
+
 		output.append("}");
 
 		return output.toString();
@@ -22,11 +25,7 @@ public class UserUtils {
 	public static String convertStatusToJSON(boolean status){
 		StringBuilder output = new StringBuilder();
 
-		output.append("{");
-
-		output.append("status: \"" + ((status)?"Added successfully":"Error occurred") + "\"");
-
-		output.append("}");
+		output.append("{ status: \"" + ((status)?"Added successfully":"Error occurred") + "\" }");
 
 		return output.toString();
 	}

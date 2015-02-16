@@ -1,11 +1,12 @@
-package com.saks.test;
+package com.sample.test;
 
 import org.junit.Test;
 
-import com.saks.dao.UserDaoImpl;
+import com.sample.dao.UserDaoImpl;
 
 import java.util.List;
  
+
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;

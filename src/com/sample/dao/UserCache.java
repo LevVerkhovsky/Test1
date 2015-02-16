@@ -1,4 +1,4 @@
-package com.saks.dao;
+package com.sample.dao;
 
 import java.util.ArrayList;
 import java.util.List;

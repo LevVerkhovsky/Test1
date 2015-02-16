@@ -1,4 +1,4 @@
-package com.saks.service;
+package com.sample.service;
 
 import java.util.List;
 
